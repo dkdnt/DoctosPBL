@@ -1,0 +1,18 @@
+ADEUDOS
+
+
+ //AQUI HAY QUE VALIDAR SI ES NECESARIO AGREGAR EL CAMPO CONCEPTO
+ YA QUE A LO MEJOR ESTO IMPLICARIA MODIFICAR LA BD Y PONER COMO LLAVE FORANEA 
+ LA REALCION DE CONCEPTO - MOVRECIBO
+
+select q1.rec_noRecibo,q1.rec_fecha,q2.mre_descripcion,q2.mre_cantidad
+from recibos q1 
+inner join movrecibo q2
+   on q1.rec_idrecibo=q2mre_idrecibo
+inner join deptoper q3
+   on q3.idDepartamento=q1.idDepartamento
+inner join persona q4
+   on q4.per_idPersona=q3.dpe_idPersona
+ where
+   idPersona=PERSONA;
+

@@ -1,0 +1,60 @@
+
+CON EL NOMBRE DE USUARIO OBTENER EL IDPERSONA
+
+SELECT IDPERSONA
+FROM PERSONA
+WHERE per_usuario=USUARIO;
+
+
+/////////DATOS PERSONALES
+UPDATE PERSONA
+SET per_nombre=NOMBRE,
+    per_apellidos=APELLIDOS,
+    per_email=EMAIL
+WHERE 
+     per_idPersona=IDPERSONA
+
+/////// DATOS USUARIO
+
+PRIMERO SE HACE UN SELECT PARA TRAER LA CONTRASEÑA ANTERIOR Y VALIDAR QUE SEA LA MISMA 
+
+SI ES LA MISMA
+   SE VALIDAN LAS DOS CAMPOS DE CONTRASEÑA NUEVA
+    SI SE SON IGUALES
+   		UPDATE PERSONA
+   		SET per_contrase=CONTRASEÑA NUEVA,
+   		WHERE 
+     	per_idPersona=IDPERSONA;
+    SI NO SON IGUALES
+        NO SE PUEDE ACTUALIZAR
+SI NO ES LA MISMA
+    NO SE PUEDE ACTUALIZAR
+
+//////////DATOS ADICIONALES
+
+Si esta marcado el recibir mensajes es TRUE
+
+UPDATE PERSONA
+SET per_curp=CURP,
+    per_apellidos=TELEFONO,
+    per_celular=CELULAR
+    per_mensaje=TRUE
+WHERE 
+     per_idPersona=IDPERSONA
+
+/////DATOS FISCALES
+
+UPDATE PERSONA
+SET per_rfc=RFC,
+ 	per_razonSoc=NOMBRERS,   
+ 	per_dirfis=DIRFIS,     
+ 	per_colfis=COLFIS, 
+ 	per_cpfis=CPFIS
+ 	per_delfis=DELFIS,     
+ 	per_pobfis=POBFIS
+WHERE 
+     per_idPersona=IDPERSONA
+
+
+
+

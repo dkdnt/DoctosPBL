@@ -1,0 +1,49 @@
+REGISTRO
+
+insert into
+Persona values
+ per_idPersona,
+ per_nombre,
+ per_apellidos,
+ per_email,
+ per_usuario,
+ per_contrase,
+ per_curp,              //VACIO
+ per_telefono,          //VACIO
+ per_celular,           //VACIO
+ per_rfc,               //VACIO
+ per_razonSoc,          //VACIO
+ per_dirfis,            //VACIO
+ per_colfis,            //VACIO
+ per_cpfis              //VACIO
+ per_delfis,            //VACIO
+ per_pobfis             //VACIO
+ per_mensaje,           //VACIO
+ per_titiluar           //VACIO
+ )
+
+ select edi_direccion from edificio
+ where edi_cp= CAMPO CP  ///AGREGAR CAMPO CP A EDIFICIO Y COLONIA Y DATOS DE DOMICIOLIO
+
+ Se dispara un trigger insertando un datos en la tabla DEPARTAMENTOS
+
+INSERT INTO deptoper
+values(Departamento_dep_idDepartamento,
+ Departamento_Edificio_edi_idEdificio,
+ Persona_per_idPersona
+)
+
+INSERT INTO departamento
+(
+dep_idDepartamento, // 
+dep_idEdificio,  // SE LLENA CON EL ID DEL EDIFICIO
+dep_idPersona,  //SE LLENA CON EL ID DE LA PERSONA 
+dep_numDepto,   //SE LLENA CON EL CAMPO DEL NOMBRE DEL DEPTO
+dep_mCuadrados 
+)
+
+
+
+
+
+
